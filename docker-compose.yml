@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: mmx
+      POSTGRES_USER: mmx
+      POSTGRES_PASSWORD: mmx
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+  backend:
+    build: ./backend
+    ports: ["8000:8000"]
+    depends_on: [postgres, redis]
+    environment:
+      DATABASE_URL: postgresql+asyncpg://mmx:mmx@postgres:5432/mmx
+      REDIS_URL: redis://redis:6379/0
+      USE_GPU: "False"
+      DEFAULT_LANG: "pt-BR"
+    volumes: [uploads:/app/uploads, results:/app/results]
+  celery-worker:
+    build: ./backend
+    command: celery -A app.services.tasks.celery_app worker --loglevel=info -Q gpu --concurrency=1
+    depends_on: [redis, postgres]
+    environment:
+      DATABASE_URL: postgresql+asyncpg://mmx:mmx@postgres:5432/mmx
+      REDIS_URL: redis://redis:6379/0
+      USE_GPU: "True"
+  frontend:
+    build: ./frontend
+    ports: ["3000:80"]
+    depends_on: [backend]
+volumes:
+  pgdata:
+  uploads:
+  results:

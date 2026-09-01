@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* { scrollbar-width: thin; scrollbar-color: #1e2330 transparent; }
+*::-webkit-scrollbar { width: 6px; height: 6px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: #1e2330; border-radius: 3px; }
+@layer components {
+  .glass { @apply bg-mmx-surface/70 backdrop-blur-xl border border-mmx-border/60; }
+  .glass-strong { @apply bg-mmx-elevated/80 backdrop-blur-xl border border-mmx-border; }
+  .card { @apply glass rounded-2xl p-6; }
+  .btn-primary { @apply bg-mmx-accent text-mmx-bg font-semibold px-5 py-2.5 rounded-xl hover:shadow-[0_0_30px_rgba(0,229,160,.3)] transition-all duration-300 active:scale-[.97] disabled:opacity-40; }
+  .btn-ghost { @apply border border-mmx-border text-mmx-text font-medium px-5 py-2.5 rounded-xl hover:bg-mmx-elevated hover:border-mmx-accent/40 transition-all duration-300; }
+  .input-mmx { @apply w-full bg-mmx-surface border border-mmx-border rounded-xl px-4 py-2.5 text-mmx-text placeholder-mmx-muted focus:border-mmx-accent/50 focus:ring-2 focus:ring-mmx-accent/15 outline-none transition-all duration-200; }
+  .badge { @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold; }
+  .badge-success { @apply badge bg-mmx-accent/15 text-mmx-accent; }
+  .badge-running { @apply badge bg-mmx-accent-2/15 text-mmx-accent-2; }
+  .badge-pending { @apply badge bg-mmx-warn/15 text-mmx-warn; }
+  .badge-failed { @apply badge bg-mmx-danger/15 text-mmx-danger; }
+  .badge-queued { @apply badge bg-mmx-accent-3/15 text-mmx-accent-3; }
+  .section-title { @apply font-display text-sm font-semibold text-mmx-muted uppercase tracking-wider; }
+}
+@layer utilities {
+  .gradient-text { background: linear-gradient(135deg, #00e5a0 0%, #00b8ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .grid-bg { background-image: linear-gradient(rgba(30,35,48,.4) 1px, transparent 1px), linear-gradient(90deg, rgba(30,35,48,.4) 1px, transparent 1px); background-size: 40px 40px; }
+}

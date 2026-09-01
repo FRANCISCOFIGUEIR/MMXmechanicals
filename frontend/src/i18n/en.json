@@ -1,0 +1,12 @@
+{
+  "brand": "MMX Mechanics", "tagline": "Computational Fluid Dynamics Engineering",
+  "nav": {"dashboard": "Dashboard", "projects": "Projects", "simulations": "Simulations", "library": "Library", "settings": "Settings", "docs": "Documentation", "profile": "Profile", "logout": "Logout", "upgrade": "Upgrade"},
+  "dashboard": {"welcome": "Welcome back", "subtitle": "Overview of your simulations", "newSimulation": "New Simulation", "newProject": "New Project", "activeSimulations": "Active Simulations", "totalRuns": "Total Runs", "gpuHours": "GPU Hours", "avgComputeTime": "Avg Compute Time", "recentSimulations": "Recent Simulations", "quickActions": "Quick Actions", "importGeometry": "Import Geometry", "openProject": "Open Project", "viewResults": "View Results", "noSimulations": "No simulations yet"},
+  "simulation": {"new": "New Simulation", "run": "Run", "cancel": "Cancel", "results": "Results", "converged": "Converged", "failed": "Failed", "running": "Running", "queued": "Queued", "pending": "Pending", "completed": "Completed", "iterations": "Iterations", "residual": "Residual", "progress": "Progress", "computeTime": "Compute Time", "gridSize": "Grid Size", "gpuUsed": "GPU Used", "step1": "Geometry", "step2": "Physics", "step3": "Boundary Conditions", "step4": "Review", "next": "Next", "back": "Back"},
+  "physics": {"title": "Physical Parameters", "density": "Density", "viscosity": "Viscosity", "inletVelocity": "Inlet Velocity", "thermalAnalysis": "Thermal Analysis", "turbulenceModel": "Turbulence Model", "laminar": "Laminar", "les": "LES", "maxIterations": "Max Iterations"},
+  "boundary": {"title": "Boundary Conditions", "west": "West", "east": "East", "south": "South", "north": "North", "velocity": "Velocity", "pressure": "Pressure", "wall": "Wall", "outflow": "Outflow"},
+  "geometry": {"title": "Import Geometry", "dragDrop": "Drag and drop file here", "browse": "Browse File", "voxelize": "Voxelize Geometry", "uploading": "Uploading...", "uploadSuccess": "File uploaded"},
+  "results": {"title": "Results", "velocityField": "Velocity Field", "pressureField": "Pressure Field", "temperatureField": "Temperature Field", "statistics": "Statistics", "maxVelocity": "Max Velocity", "convergenceHistory": "Convergence History"},
+  "billing": {"plan": "Plan", "free": "Free", "pro": "Pro", "enterprise": "Enterprise", "upgradeNow": "Upgrade Now"},
+  "errors": {"fileTooLarge": "File too large", "unsupportedFormat": "Unsupported format", "simulationFailed": "Simulation failed"}
+}
