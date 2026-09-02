@@ -1,6 +1,6 @@
 # MMX Mechanics - CFD Engine
 ## Plataforma SaaS de Fluidodinamica Computacional com GPU CUDA e Lattice Boltzmann Method (LBM D3Q19)
-### Powered by Figsmor Engenharia - figsmor.com.br
+### Powered by MMX Technologies 
 
 ### Como executar:
 docker-compose up -d
